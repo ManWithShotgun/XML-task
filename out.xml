@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:candies xmlns="http://www.ingredients.ru" xmlns:ns2="http://www.candy.ru">
+    <ns2:candy nameCandy="Candy1" calories="23" typeCandy="Caramel" producer="producer1">
+        <ns2:ingredients>
+            <water>2</water>
+            <sugar>2</sugar>
+            <fructose>3</fructose>
+            <vanilin>5</vanilin>
+        </ns2:ingredients>
+        <ns2:properties>
+            <ns2:proteins>2</ns2:proteins>
+            <ns2:fats>3</ns2:fats>
+            <ns2:carbohydrate>2</ns2:carbohydrate>
+        </ns2:properties>
+    </ns2:candy>
+    <ns2:candy nameCandy="Candy2" calories="23" typeCandy="Caramel" producer="producer2">
+        <ns2:ingredients>
+            <water>2</water>
+            <sugar>2</sugar>
+            <fructose>3</fructose>
+            <vanilin>5</vanilin>
+        </ns2:ingredients>
+        <ns2:properties>
+            <ns2:proteins>2</ns2:proteins>
+            <ns2:fats>3</ns2:fats>
+            <ns2:carbohydrate>2</ns2:carbohydrate>
+        </ns2:properties>
+    </ns2:candy>
+</ns2:candies>

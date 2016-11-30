@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.candy.ru"
+        xmlns:c="http://www.candy.ru"
+        xmlns:i="http://www.ingredients.ru"
+        xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <import namespace="http://www.ingredients.ru" schemaLocation="ingredients.xsd"/>
+    <simpleType name="kkalType">
+        <restriction base="int">
+            <minInclusive value="0"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="grType">
+        <restriction base="int">
+            <minInclusive value="0"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="candyType">
+        <restriction base="string">
+            <enumeration value="Caramel"/>
+            <enumeration value="Iris"/>
+            <enumeration value="Chocolate"/>
+        </restriction>
+    </simpleType>
+    <complexType name="propType">
+        <sequence>
+            <element name="proteins" type="c:grType"/>
+            <element name="fats" type="c:grType"/>
+            <element name="carbohydrate" type="c:grType"/>
+        </sequence>
+    </complexType>
+    <element name="candies">
+        <complexType>
+            <choice maxOccurs="unbounded">
+                <element name="candy">
+                    <complexType>
+                        <sequence>
+                            <element name="ingredients" type="i:ingredientsType"/>
+                            <element name="properties" type="c:propType"/>
+                        </sequence>
+                        <attribute name="nameCandy" type="string" use="required"/>
+                        <attribute name="calories" type="c:kkalType" use="required"/>
+                        <attribute name="typeCandy" type="c:candyType" use="required"/>
+                        <attribute name="producer" type="string" use="required"/>
+                    </complexType>
+                </element>
+            </choice>
+        </complexType>
+    </element>
+</schema>

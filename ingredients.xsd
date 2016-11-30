@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.ingredients.ru"
+        xmlns:private="http://www.ingredients.ru"
+        xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <simpleType name="mgType">
+        <restriction base="int">
+            <minInclusive value="0"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="chocolateType">
+        <restriction base="string">
+            <enumeration value="Milk"/>
+            <enumeration value="White"/>
+            <enumeration value="Classic"/>
+        </restriction>
+    </simpleType>
+    <complexType name="ingredientsType">
+        <sequence maxOccurs="1">
+            <element name="water" type="private:mgType"/>
+            <element name="sugar" type="private:mgType"/>
+            <element name="fructose" type="private:mgType"/>
+            <element name="chocolate" type="private:chocolateType" minOccurs="0"/>
+            <element name="vanilin" type="private:mgType"/>
+        </sequence>
+    </complexType>
+</schema>
